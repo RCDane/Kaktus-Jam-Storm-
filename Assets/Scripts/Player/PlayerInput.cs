@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
     PlayerMovement playerMovement;
+    PlayerJump playerJump;
 	// Use this for initialization
 	void Start () {
         playerMovement = GetComponent<PlayerMovement>();
+        playerJump = GetComponent<PlayerJump>();
 	}
 	
 	// Update is called once per frame
@@ -15,5 +17,9 @@ public class PlayerInput : MonoBehaviour {
         float yInput = Input.GetAxisRaw("Vertical");
 
         playerMovement.Move(xInput);
-	}
+        if(yInput == 1)
+        {
+            playerJump.TryJump();
+        }
+    }
 }
