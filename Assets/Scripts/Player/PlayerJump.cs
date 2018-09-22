@@ -25,9 +25,9 @@ public class PlayerJump : MonoBehaviour {
     {
         RaycastHit2D hit;
         float size = boxCollider.size.x;
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size * 0.98f, 0, Vector2.down, 0.03f, groundLayer, Mathf.Infinity);
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size * 0.98f, 0, Vector2.down, 1f, groundLayer, Mathf.Infinity);
         
-        if (hit.transform != null && hit.transform.CompareTag("Ground") && jumpTimer + 0.3f < Time.timeSinceLevelLoad)
+        if (hit.transform != null && jumpTimer + 0.3f < Time.timeSinceLevelLoad)
         {
             playerRB.gravityScale = minGravity;
         }
@@ -47,8 +47,8 @@ public class PlayerJump : MonoBehaviour {
     {
         RaycastHit2D hit;
         float size = boxCollider.size.x;
-        hit = Physics2D.BoxCast(transform.position, boxCollider.size * 0.98f *transform.localScale.x, 0, Vector2.down, 0.03f,groundLayer,Mathf.Infinity);
-        if (hit.transform != null && hit.transform.CompareTag("Ground") && jumpTimer + 0.3f< Time.timeSinceLevelLoad)
+        hit = Physics2D.BoxCast(transform.position, boxCollider.size * 0.98f *transform.localScale.x, 0, Vector2.down, 0.1f,groundLayer,Mathf.Infinity);
+        if (hit.transform != null && jumpTimer + 0.3f< Time.timeSinceLevelLoad)
         {
             playerRB.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
             jumpTimer = Time.timeSinceLevelLoad;
