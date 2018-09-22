@@ -35,6 +35,7 @@ public class CameraVolume : MonoBehaviour {
     {
         if (collision.transform != null && collision.transform.CompareTag("Player"))
             interpolating = false;
+        Debug.Log(transform.name);
                 //{
         //    CinemachineVirtualCamera cam = collision.transform.GetComponent<CinemachineVirtualCamera>();
         //}
