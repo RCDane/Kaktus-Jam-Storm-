@@ -123,9 +123,9 @@ GameObject:
   - component: {fileID: 117890130}
   - component: {fileID: 117890129}
   - component: {fileID: 117890128}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Block
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -214,6 +214,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &278985106
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.016900063
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.01808
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.32265624
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4957179173630354, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 52c6b2bcf24d58b4694a6234119791da, type: 2}
+  m_IsPrefabAsset: 0
 --- !u!1 &829953711
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,9 +359,9 @@ GameObject:
   - component: {fileID: 842952807}
   - component: {fileID: 842952804}
   - component: {fileID: 842952808}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Rock
-  m_TagString: Untagged
+  m_TagString: Rock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -439,60 +481,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 179ec18ad7f9d464b8731c5e3f45fddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &898128255
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -0.04
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0.32265624
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4957179173630354, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114509952137062066, guid: e3bed8ecd24028e428b919fa9a0427e5,
-        type: 2}
-      propertyPath: jumpPower
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 61304213889751296, guid: e3bed8ecd24028e428b919fa9a0427e5,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 114323215684506400, guid: e3bed8ecd24028e428b919fa9a0427e5,
-        type: 2}
-      propertyPath: moveSpeed
-      value: 30
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e3bed8ecd24028e428b919fa9a0427e5, type: 2}
-  m_IsPrefabAsset: 0
+  rockLayer:
+    serializedVersion: 2
+    m_Bits: 0
