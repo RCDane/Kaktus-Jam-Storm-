@@ -36,12 +36,5 @@ public class Rock : MonoBehaviour {
         }
 
     }
-
-    void OnCollisionEnter2D(Collision2D col) {
-        if(col.gameObject.CompareTag("Player")) {
-            Debug.Log("With Player!");
-            var RB = GetComponent<Rigidbody2D>();
-            RB.bodyType = RigidbodyType2D.Dynamic;
-        }
-    }
+    
 }
