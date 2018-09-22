@@ -11,6 +11,7 @@ public class CameraVolume : MonoBehaviour {
     {
         if(collision.transform != null && collision.transform.CompareTag("Player"))
         {
+            interpolationDirection = cameraSize - startSize;
             cam = Camera.main.transform.GetComponent<CinemachineVirtualCamera>();
             startTime = Time.timeSinceLevelLoad;
             interpolating = true;
@@ -19,6 +20,7 @@ public class CameraVolume : MonoBehaviour {
     }
     bool interpolating = false;
     float startTime;
+    float interpolationDirection;
     float startSize;
     private void Update()
     {
@@ -26,7 +28,8 @@ public class CameraVolume : MonoBehaviour {
         {
             LensSettings lens = cam.m_Lens;
             float timeCalc = (Time.timeSinceLevelLoad - startTime) / (interpolationTime);
-            float currentSize = Mathf.Clamp(Mathf.Lerp(startSize, cameraSize, timeCalc),startSize,cameraSize);
+            timeCalc = Mathf.Clamp(timeCalc, 0, 1);
+            float currentSize = startSize+/*Mathf.Lerp(startSize, cameraSize, timeCalc)*/timeCalc*interpolationDirection;
             lens.OrthographicSize = currentSize;
             cam.m_Lens = lens;
         }
