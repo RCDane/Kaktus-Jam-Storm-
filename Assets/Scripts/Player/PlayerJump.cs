@@ -32,7 +32,7 @@ public class PlayerJump : MonoBehaviour {
             playerRB.gravityScale = minGravity;
         }
 
-        if (Input.GetKey(KeyCode.W) || Input.GetButton("Fire1"))
+        if (Input.GetKey(KeyCode.W) || Input.GetButton("Fire1") || Input.GetKey(KeyCode.UpArrow))
             return;
        
         if (hit.transform == null)
