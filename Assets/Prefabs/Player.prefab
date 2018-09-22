@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114863144022093582}
   - component: {fileID: 114323215684506400}
   - component: {fileID: 114509952137062066}
+  - component: {fileID: 68749140488102216}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -90,6 +91,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!68 &68749140488102216
+EdgeCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017419115159486}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.5}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.4942987, y: 0.0056979954}
+  - {x: -0.4651866, y: -0.0041804314}
+  - {x: 0.43567616, y: -0.003622532}
+  - {x: 0.49287346, y: 0.002848953}
 --- !u!114 &114323215684506400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a6851565e38d6240885960ed001e446, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 70
+  moveSpeed: 40
   maxSpeed: 5
 --- !u!114 &114509952137062066
 MonoBehaviour:
@@ -119,7 +139,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   minGravity: 1.3
-  maxGravity: 2.7
+  maxGravity: 4.5
 --- !u!114 &114863144022093582
 MonoBehaviour:
   m_ObjectHideFlags: 1
