@@ -15,9 +15,9 @@ public class PlayerInput : MonoBehaviour {
 	void Update () {
         float xInput = Input.GetAxisRaw("Horizontal");
         float yInput = Input.GetAxisRaw("Vertical");
-
+        bool jump = Input.GetButtonDown("Fire1");
         playerMovement.Move(xInput);
-        if(yInput == 1)
+        if(yInput == 1 || jump)
         {
             playerJump.TryJump();
         }
