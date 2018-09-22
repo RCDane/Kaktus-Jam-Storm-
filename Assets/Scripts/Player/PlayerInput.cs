@@ -14,10 +14,10 @@ public class PlayerInput : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         float xInput = Input.GetAxisRaw("Horizontal");
-        float yInput = Input.GetAxisRaw("Vertical");
+        bool yInput = Input.GetKeyDown(KeyCode.W);
         bool jump = Input.GetButtonDown("Fire1");
         playerMovement.Move(xInput);
-        if(yInput == 1 || jump)
+        if(yInput || jump)
         {
             playerJump.TryJump();
         }
