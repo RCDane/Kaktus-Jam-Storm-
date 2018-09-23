@@ -12,6 +12,7 @@ public class CameraVolume : MonoBehaviour {
         if(collision.transform != null && collision.transform.CompareTag("Player"))
         {
             interpolationDirection = cameraSize - startSize;
+
             cam = Camera.main.transform.GetComponent<CinemachineVirtualCamera>();
             startTime = Time.timeSinceLevelLoad;
             interpolating = true;
