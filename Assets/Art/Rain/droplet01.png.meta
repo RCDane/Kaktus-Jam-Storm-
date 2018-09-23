@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: c89c1daecf675404a813971e97711e42
+guid: 419367f852e5d1a40be044716e047b82
 TextureImporter:
   fileIDToRecycleName: {}
   externalObjects: {}
@@ -97,12 +97,12 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eb9d7c63facb17d448512c1ff1e5ac6f
     vertices: []
     indices: 
     edges: []
     weights: []
-  spritePackingTag: 
+  spritePackingTag: Rain Drobs
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
   userData: 
