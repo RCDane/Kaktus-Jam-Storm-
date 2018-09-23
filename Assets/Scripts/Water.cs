@@ -25,9 +25,14 @@ public class Water : MonoBehaviour {
             // so cache this copy in a member variable so we can dispose of it when we're done.
             var _myMaterial = fog.GetComponent<SpriteRenderer>();
 
+            var player = GameObject.FindGameObjectWithTag("Player");
+            var _pmat = player.GetComponent<SpriteRenderer>();
+
             // Start a coroutine to fade the material to zero alpha over 3 seconds.
             // Caching the reference to the coroutine lets us stop it mid-way if needed.
             var _currentFade = StartCoroutine(FadeTo(_myMaterial,1f,0.5f));
+            var _pfade = StartCoroutine(FadeTo(_pmat,0f,0.5f));
+
             //var player = GameObject.FindGameObjectWithTag("Player");
             //player.gameObject.transform.position = new Vector3(-193.07f,-15.27f);
             StartCoroutine(ExecuteAfterTime(2f));
@@ -58,9 +63,13 @@ public class Water : MonoBehaviour {
         // so cache this copy in a member variable so we can dispose of it when we're done.
         var _myMaterial = fog.GetComponent<SpriteRenderer>();
 
+        var player = GameObject.FindGameObjectWithTag("Player");
+        var _pmat = player.GetComponent<SpriteRenderer>();
+
         // Start a coroutine to fade the material to zero alpha over 3 seconds.
         // Caching the reference to the coroutine lets us stop it mid-way if needed.
         var _currentFade = StartCoroutine(FadeTo(_myMaterial,0f,2f));
+        var _pfade = StartCoroutine(FadeTo(_pmat,1f,0.5f));
     }
 
 
