@@ -8,6 +8,8 @@ TagManager:
   - Rock
   - Water
   - Fog
+  - EndZone
+  - EndDarkness
   layers:
   - Default
   - TransparentFX
