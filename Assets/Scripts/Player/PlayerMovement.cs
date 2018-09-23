@@ -34,10 +34,10 @@ public class PlayerMovement : MonoBehaviour {
 
             velocity.x = maxSpeed * Mathf.Sign(velocity.x);
 
-        if(Mathf.Sign(velocity.x) > 0) {
+        if(velocity.x > 0) {
             var rend = GetComponent<SpriteRenderer>();
             rend.flipX = false;
-        } else {
+        } else if(velocity.x <= 0){
             var rend = GetComponent<SpriteRenderer>();
             rend.flipX = true;
         }
