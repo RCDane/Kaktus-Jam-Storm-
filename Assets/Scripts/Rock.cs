@@ -18,9 +18,9 @@ public class Rock : MonoBehaviour {
 	void Update () {
         DistanceJoint2D joint = GetComponent<DistanceJoint2D>();
 
-        if(Input.GetKey("joystick button 0")) {
+        if(Input.GetKey("joystick button 0")|| Input.GetKey("w")) {
             Destroy(joint);
-        } else if(Input.GetKey("joystick button 1") ^ joint != null) {
+        } else if((Input.GetKey("joystick button 1") || Input.GetKey("p")) ^ joint != null) {
             if(joint != null) {
                 Destroy(joint);
             } else {
